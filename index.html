@@ -1,0 +1,57 @@
+<style>
+    h1{font-family: sans-serif;}
+    h3{font-family: sans-serif;}
+    #console{
+        background-color: black;
+        color: lawngreen;
+        font-family: monospace;
+        width: 1200px;
+        height: 300px;
+        font-size: 15px;
+    }
+    input{
+        width: 400px;
+    }
+</style>
+<script>
+    function done() {
+        document.getElementById("consoleText").innerHTML = document.getElementById("consoleText").innerHTML + "<br>Done! Opening URL!"
+        var url = document.getElementById("url").value
+        url = url + "/play/"
+        window.open(url)
+    }
+    function inject() {
+        alert("WARNING: If you did not enter a URL begining with https://www.coolmathgames.com/ then this tool will fail to inject and you will get an invalid return URL!")
+        document.getElementById("consoleText").innerHTML = document.getElementById("consoleText").innerHTML + "<br>Ready! Doing exploit..."
+        setTimeout(done,2000)
+    }
+    function connected() {
+        document.getElementById("consoleText").innerHTML = document.getElementById("consoleText").innerHTML + "<br>Connected as 2610:1c2:8101:1938:a8ed:5e70:433e:d928"
+        setTimeout(inject,300)
+    }
+    function initConnection() {
+        document.getElementById("consoleText").innerHTML = document.getElementById("consoleText").innerHTML + "<br>Initializing connection to server..."
+        setTimeout(connected,1200)
+    }
+    function initHax() {
+        var url = document.getElementById("url").value
+        document.getElementById("consoleText").innerHTML = "Preparing to inject into "+url+" please wait..."
+        setTimeout(initConnection,500)
+    }
+</script>
+
+<title>Coolmath Games Fullscreen Injector</title>
+<h1>Coolmath Games Fullscreen Injector Tool</h1>
+<h3>Coded by Reuben Schiopu</h3>
+<input id="url"></input>
+<button onclick="initHax()">Inject!</button>
+<div id=console>
+    <p id="consoleText">Click the inject button to begin!</p>
+</div>
+<h4>How to use:</h4>
+<ul>
+    <li>Go to a game on Coolmath Games</li>
+    <li>Paste the URL of the game into the textbox above</li>
+    <li>Click the inject button</li>
+    <li>Once the exploit is complete, your game will launch in fullscreen with no ads</li>
+</ul>
