@@ -1,0 +1,30 @@
+<style>
+    h1{font-family: sans-serif;}
+    h3{font-family: sans-serif;}
+    #console{
+        background-color: black;
+        color: lawngreen;
+        font-family: monospace;
+        width: 1200px;
+        height: 300px;
+        font-size: 15px;
+    }
+    input{
+        width: 400px;
+    }
+</style>
+<script>
+    function go() {
+        var url = document.getElementById("url").value
+        url = url + "/play/"
+        window.open(url)
+    }
+</script>
+
+<title>Coolmath Games Fullscreen Injector</title>
+<h1>Coolmath Games Fullscreen Injector Tool (lazy mode)</h1>
+<h3>Coded by Reuben Schiopu</h3>
+<input id="url"></input>
+<button onclick="go()">go</button>
+<br><br>
+<a href="index.html">original version</a>
